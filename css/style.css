@@ -1,0 +1,173 @@
+* {
+	box-sizing: border-box; /** чтобы все размеры сходились пиксель в пиксель **/
+}
+
+body {
+	background: #010202;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+	width: 90%;
+	max-width: 1146px;
+	margin: auto;
+	padding: 56px 0; /** padding: верх/низ, лево/право **/
+	display: flex;
+	justify-content: space-between; /* чтобы логотип и ссылка разнеслись по краям */
+	align-items:  center; /* выравнивание логотипа по центру относительно ссылки-пользователя */
+}
+
+.logo {
+	display: block;
+}
+
+.user-photo {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.login {
+	display: flex;
+}
+
+.user {
+	display: flex;
+	align-items: center;
+}
+
+.user-name {
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	margin-right: 15px;
+}
+
+.app {
+	background: linear-gradient(90deg, #010202 0%, #010202 43%, rgba(1, 2, 2, 0.2) 90.9%);
+	min-height: 100vh; /* во всю высоту экрана */
+	color: #FFFFFF;
+}
+
+.film {
+	width: 90%;
+	max-width: 1146px;
+	margin: auto;
+	padding: 7% 0;
+}
+
+.tags {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	opacity: 0.4; /* непрозрачность элементов */
+	color: #E5E5E5;
+	font-size: 16px;
+	line-height: 140%;
+	flex-wrap: wrap; /* при непомещении слова в строке, слово будет смещаться на другую строчку */ 
+}
+
+.tags > * {
+	margin-right: 15px; /* отступы элементов внутри класса tags */
+	margin-bottom: 10px;
+}
+
+.age {
+	border: 1px solid #FFFFFF;
+	box-sizing: border-box;
+	border-radius: 2px;
+	padding: 1px 5px;
+}
+
+.description {
+	max-width: 460px;
+	font-size: 21px;
+	line-height: 140%;
+	margin-bottom: 36px;
+}
+
+.button {
+	padding: 11px 26px;
+	border-radius: 6px;
+	border: none;
+	background: #2F2F2F;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.button-primary {
+	background: #EA6E20;
+	margin-right: 15px;
+}
+
+.button-text {
+	margin-left: 10px;
+	vertical-align: text-bottom;
+}
+
+#pre-order-film {
+	border-radius: 15px;
+}
+
+.title-pre-order-film {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.button-pre-order {
+	margin-top: 10px;
+	display: inline-block;
+}
+
+/* адаптивная верстка для гаджетов с маленьким экраном */
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 768px) {
+	.app {
+		height: auto;
+		padding-bottom: 400px;
+		background: url('../img/cover-image.jpg') no-repeat bottom center / 300px;
+	}
+
+	video {
+		display: none;
+	}
+
+	.film {
+		padding-top: 2%;
+	}
+
+	.description {
+		font-size: 16px;
+		max-width: 333px;
+	}
+
+	.film-logo {
+		max-width: 100%;
+	}
+}
+
+@media(max-width: 576px) {
+	.button-text {
+		display: none; /* скрытие элемента */
+	}
+
+	.user-name {
+		display: none; /* скрытие элемента */
+	}
+
+	.app {
+		padding-bottom: 350px;
+		background-size: 300px;
+	}
+
+	.button {
+		margin-bottom: 10px;
+	}
+}
