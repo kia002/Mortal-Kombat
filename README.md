@@ -4,5 +4,5 @@
 - HTML
 - CSS
 - Normalize
-- JQvery
+- jQvery
 - Fancybox (JQvery)
